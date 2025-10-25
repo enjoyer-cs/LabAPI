@@ -26,4 +26,10 @@ public class LabApiConfig
     /// </summary>
     [Description("Config path relative to the Configs folder to load from. Use $port to load from the server port's folder.")]
     public string ConfigPath { get; set; } = "$port";
+  
+    /// Whether to allow loading plugins even if they were built for a different major version of LabAPI.
+    /// </summary>
+    /// <seealso cref="LabApi.Loader.Features.Plugins.Configuration.Properties.UnsupportedLoading"/>
+    [Description("Whether to allow loading plugins even if they were built for a different major version of LabAPI.")]
+    public bool LoadUnsupportedPlugins { get; set; }
 }
